@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Portfolio</title>
+  <title>My Portfolio</title>
 
   <style>
     * {
@@ -22,16 +22,16 @@
 
     header {
       position: fixed;
-      top: 0;
-      width: 100%;
+      inset-block-start: 0;
+      inline-size: 100%;
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-block-end: 1px solid rgba(255,255,255,0.1);
     }
 
     nav {
-      max-width: 1200px;
+      max-inline-size: 1200px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -65,7 +65,7 @@
     }
 
     .hero {
-      min-height: 100vh;
+      min-block-size: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -76,7 +76,7 @@
 
     .hero h2 {
       font-size: 60px;
-      margin-bottom: 20px;
+      margin-block-end: 20px;
     }
 
     .hero span {
@@ -84,10 +84,10 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-inline-size: 700px;
       color: #ccc;
       line-height: 1.7;
-      margin-bottom: 30px;
+      margin-block-end: 30px;
     }
 
     .btns {
@@ -127,13 +127,13 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-inline-size: 1200px;
       margin: auto;
     }
 
     .title {
       font-size: 42px;
-      margin-bottom: 50px;
+      margin-block-end: 50px;
       text-align: center;
     }
 
@@ -165,10 +165,10 @@
     }
 
     .project-image {
-      height: 200px;
+      block-size: 200px;
       background: linear-gradient(to right, #00e5ff33, #8b5cf633);
       border-radius: 15px;
-      margin-bottom: 20px;
+      margin-block-end: 20px;
     }
 
     .skills {
@@ -178,15 +178,15 @@
     }
 
     .skill-bar {
-      width: 100%;
-      height: 12px;
+      inline-size: 100%;
+      block-size: 12px;
       background: rgba(255,255,255,0.1);
       border-radius: 20px;
       overflow: hidden;
     }
 
     .skill-progress {
-      height: 100%;
+      block-size: 100%;
       background: linear-gradient(to right, #00e5ff, #8b5cf6);
     }
 
@@ -194,7 +194,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      max-width: 700px;
+      max-inline-size: 700px;
       margin: auto;
     }
 
@@ -211,11 +211,11 @@
     footer {
       text-align: center;
       padding: 30px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-block-start: 1px solid rgba(255,255,255,0.1);
       color: #aaa;
     }
 
-    @media (max-width: 768px) {
+    @media (max-inline-size: 768px) {
       nav ul {
         display: none;
       }
@@ -276,7 +276,7 @@
           <p>✔ Frontend Development</p>
           <p>✔ Responsive Design</p>
           <p>✔ UI/UX Design</p>
-          <p>✔ JavaScript Animations</p>
+          <p>✔ Basics of JavaScript Animations</p>
         </div>
       </div>
     </div>
@@ -288,24 +288,36 @@
 
       <div class="projects-grid">
         <div class="card">
-          <div class="project-image"></div>
-          <h3>E-Commerce Website</h3>
+          <div class="project-image" image-src="image.png"></div>
           <br>
-          <p>Modern shopping website with animations and responsive design.</p>
+           <a href="https://login-todo-sooty.vercel.app/" class="btn secondary">View Project</a>
+          <br>
+          <br><br>
+          <h3>login-Todo website</h3>
+          <br>
+          <p>Modern login and todo website with responsive design.</p>
         </div>
-
+       
         <div class="card">
-          <div class="project-image"></div>
+          <div class="project-image" image-src="image2.png"></div>
+          <br>
+              <a href="https://my-portfolio-website-beta-beige.vercel.app/" class="btn secondary">View Project</a>
+          <br><br><br>
           <h3>Portfolio Website</h3>
           <br>
           <p>Creative portfolio design with glassmorphism UI.</p>
         </div>
 
+
         <div class="card">
-          <div class="project-image"></div>
-          <h3>Dashboard UI</h3>
+          <div class="project-image" image-src="image3.png"></div>
           <br>
-          <p>Interactive admin dashboard with charts and widgets.</p>
+              <a href="https://billing-website-chi.vercel.app/" class="btn secondary">View Project</a>
+          
+          <br><br><br>    
+          <h3>Restaurant Billing Website</h3>
+          <br>
+          <p>Interactive restaurant billing system with real-time updates.</p>
         </div>
       </div>
     </div>
@@ -319,21 +331,35 @@
         <div>
           <p>HTML</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width:95%"></div>
+            <div class="skill-progress" style="inline-size:95%"></div>
           </div>
         </div>
 
         <div>
           <p>CSS</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width:90%"></div>
+            <div class="skill-progress" style="inline-size:90%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p>Java</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="inline-size:90%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p>Python</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="inline-size:85%"></div>
           </div>
         </div>
 
         <div>
           <p>JavaScript</p>
           <div class="skill-bar">
-            <div class="skill-progress" style="width:85%"></div>
+            <div class="skill-progress" style="inline-size:85%"></div>
           </div>
         </div>
       </div>
